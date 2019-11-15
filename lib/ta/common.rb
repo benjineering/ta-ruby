@@ -1,4 +1,3 @@
-require 'ta/version'
 require 'ffi'
 
 module TA
