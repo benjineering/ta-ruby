@@ -5,11 +5,13 @@ require 'ta/version'
 Gem::Specification.new do |spec|
   spec.name = 'ta'
   spec.version = TA::GEM_VERSION
+
   spec.authors = [ 'Ben Williams' ]
   spec.email = [ '8enwilliams@gmail.com' ]
 
-  spec.summary = 'An FFI wrapper around TA Lib'
+  spec.summary = 'An FFI wrapper around TA-Lib'
   spec.license = 'MIT'
+  spec.homepage = 'https://github.com/benjineering/ta-ruby'
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
@@ -20,7 +22,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.bindir = 'exe'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = [ 'lib' ]
 
   spec.add_development_dependency 'bundler', '~> 2.0'
