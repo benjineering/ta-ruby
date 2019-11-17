@@ -1,7 +1,8 @@
-RSpec.describe TA::Native::Function::Candle do
+RSpec.describe TA::Native::Candle do
   describe '.doji' do
     let(:array_length) { 100 }
 
+    # TODO: create array creator method in Utility
     def double_array
       pointer = FFI::MemoryPointer.new(:double, array_length)
       values = (1..array_length).to_a.collect { Random.rand * 10 }
@@ -14,13 +15,13 @@ RSpec.describe TA::Native::Function::Candle do
 
     let(:out_integers) do
       pointer = FFI::MemoryPointer.new(:int, array_length)
-      values = (1..array_length).to_a.collect { -1 }
+      values = Array.new(array_length, -1)
       pointer.put_array_of_int(0, values)
       pointer
     end
 
     let(:function_call) do
-      TA::Native::Function::Candle.doji(
+      TA::Native::Candle.doji(
         0, 
         array_length - 1,
         double_array,
@@ -38,18 +39,17 @@ RSpec.describe TA::Native::Function::Candle do
     end
 
     it 'should set the out_beg_idx' do
-      expect { function_call }.to change { out_beg_idx[:value] }.to 0
+      expect { function_call }.to change { out_beg_idx[:value] }
     end
 
-    # TODO: why is this 100? What is an out_nb_element?
     it 'should set the out_nb_element' do
-      expect { function_call }.to change { out_nb_element[:value] }.to 100
+      expect { function_call }.to change { out_nb_element[:value] }
     end
 
     it 'should set the out_integers' do
-      expect { function_call }.to change do
+      expect { function_call }.to change {
         out_integers.get_array_of_int(0, array_length)
-      end
+      }
     end
   end
 end

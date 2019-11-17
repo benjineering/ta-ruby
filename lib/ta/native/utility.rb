@@ -22,6 +22,19 @@ module TA
       class DoublePointer < BasePointerWrapper
         layout :value, :double
       end
+
+      # TODO: DRY up C array creation
+      def self.double_array(values)
+        pointer = FFI::MemoryPointer.new(:double, values.length)
+        pointer.put_array_of_double(0, values)
+        pointer
+      end
+
+      def self.int_array(values)
+        pointer = FFI::MemoryPointer.new(:int, values.length)
+        pointer.put_array_of_int(0, values)
+        pointer
+      end
     end
   end
 end

@@ -1,6 +1,9 @@
 require 'ta/native/common'
-require 'ta/native/function/candle'
+require 'ta/native/candle'
 require 'ta/native/utility'
+
+require 'ta/candle'
+require 'ta/error'
 require 'ta/version'
 
 module TA
