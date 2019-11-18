@@ -1,6 +1,6 @@
 RSpec.describe TA::Error do
   describe '.new' do
-    subject { TA::Error.new(1) }
+    subject { TA::Error.new(0) }
 
     it 'sets enum' do
       expect(subject.enum).to eq 'TA_SUCCESS'
