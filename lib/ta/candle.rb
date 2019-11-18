@@ -1,4 +1,5 @@
 require 'ta/native/candle'
+require 'ta/native/overlap_studies'
 require 'ta/native/utility'
 require 'ta/error'
 
