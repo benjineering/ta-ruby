@@ -1,5 +1,6 @@
 # Roadmap
 
+## Functions
 - AD (Chaikin A/D Line)
 - ADOSC (Chaikin A/D Oscillator)
 - ADX (Average Directional Movement Index)
@@ -138,3 +139,5 @@
 - WCLPRICE (Weighted Close Price)
 - WILLR (Williams' %R)
 - WMA (Weighted Moving Average)
+
+## Abstract
