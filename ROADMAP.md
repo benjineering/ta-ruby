@@ -28,7 +28,7 @@
 - CDLCONCEALBABYSWALL (Concealing Baby Swallow)
 - CDLCOUNTERATTACK (Counterattack)
 - CDLDARKCLOUDCOVER (Dark Cloud Cover)
-- CDLDOJI (Doji)
+- ~~CDLDOJI (Doji)~~
 - CDLDOJISTAR (Doji Star)
 - CDLDRAGONFLYDOJI (Dragonfly Doji)
 - CDLENGULFING (Engulfing Pattern)
